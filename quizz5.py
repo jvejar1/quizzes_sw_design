@@ -1,11 +1,8 @@
-def add(numbers_str, delimiter = None):
-    if delimiter:
-        numbers = numbers_str.split(delimiter)
-    else:
-        numbers = numbers_str.split(',')
-    numbers = [int(number) for number in numbers]
+def add(numbers_str, delimiter = ','):
+    str_numbers = numbers_str.split(delimiter)
     sum = 0
-    for number in numbers:
-        if number>0:
-            sum +=number
+    for str_number in str_numbers:
+        number = int(str_number)
+        if number > 0:
+            sum += number
     return sum
